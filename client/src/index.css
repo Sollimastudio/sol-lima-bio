@@ -43,74 +43,76 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Sol Lima - Premium Editorial Luxury Palette */
+  --primary: #0B0B0B;
+  --primary-foreground: #FAF7F2;
+  --sidebar-primary: #0B0B0B;
+  --sidebar-primary-foreground: #FAF7F2;
+  --chart-1: #C6A769;
+  --chart-2: #C48A8A;
+  --chart-3: #0B0B0B;
+  --chart-4: #1A1A1A;
+  --chart-5: #111111;
+  --radius: 1.2rem;
+  --background: #FAF7F2;
+  --foreground: #111111;
+  --card: #FAF7F2;
+  --card-foreground: #111111;
+  --popover: #FAF7F2;
+  --popover-foreground: #111111;
+  --secondary: #E8E3DC;
+  --secondary-foreground: #111111;
+  --muted: #C6A769;
+  --muted-foreground: #0B0B0B;
+  --accent: #C48A8A;
+  --accent-foreground: #FAF7F2;
+  --destructive: #C48A8A;
+  --destructive-foreground: #FAF7F2;
+  --border: #E8E3DC;
+  --input: #E8E3DC;
+  --ring: #C6A769;
+  --sidebar: #FAF7F2;
+  --sidebar-foreground: #111111;
+  --sidebar-accent: #C6A769;
+  --sidebar-accent-foreground: #0B0B0B;
+  --sidebar-border: #E8E3DC;
+  --sidebar-ring: #C6A769;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Light theme only - no dark mode for premium editorial aesthetic */
+  --primary: #0B0B0B;
+  --primary-foreground: #FAF7F2;
+  --sidebar-primary: #0B0B0B;
+  --sidebar-primary-foreground: #FAF7F2;
+  --background: #FAF7F2;
+  --foreground: #111111;
+  --card: #FAF7F2;
+  --card-foreground: #111111;
+  --popover: #FAF7F2;
+  --popover-foreground: #111111;
+  --secondary: #E8E3DC;
+  --secondary-foreground: #111111;
+  --muted: #C6A769;
+  --muted-foreground: #0B0B0B;
+  --accent: #C48A8A;
+  --accent-foreground: #FAF7F2;
+  --destructive: #C48A8A;
+  --destructive-foreground: #FAF7F2;
+  --border: #E8E3DC;
+  --input: #E8E3DC;
+  --ring: #C6A769;
+  --chart-1: #C6A769;
+  --chart-2: #C48A8A;
+  --chart-3: #0B0B0B;
+  --chart-4: #1A1A1A;
+  --chart-5: #111111;
+  --sidebar: #FAF7F2;
+  --sidebar-foreground: #111111;
+  --sidebar-accent: #C6A769;
+  --sidebar-accent-foreground: #0B0B0B;
+  --sidebar-border: #E8E3DC;
+  --sidebar-ring: #C6A769;
 }
 
 @layer base {
@@ -119,6 +121,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -130,6 +133,17 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+  
+  /* Premium Editorial Typography */
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  
+  h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
   }
 }
 
@@ -171,7 +185,45 @@
     .container {
       padding-left: 2rem; /* 32px - desktop padding */
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 600px; /* Narrow width for editorial aesthetic */
     }
+  }
+  
+  /* Premium Button Styling */
+  .btn-premium {
+    @apply w-full px-6 md:px-8 py-4 md:py-5 rounded-2xl font-medium transition-all duration-300;
+    @apply bg-primary text-primary-foreground;
+    @apply shadow-sm hover:shadow-md;
+    @apply hover:-translate-y-1;
+    @apply active:scale-98 active:shadow-sm;
+    @apply outline-none;
+  }
+  
+  .btn-premium:disabled {
+    @apply opacity-50 cursor-not-allowed hover:shadow-sm hover:translate-y-0;
+  }
+  
+  .btn-premium:focus-visible {
+    @apply ring-2 ring-muted ring-offset-2 ring-offset-background;
+  }
+  
+  /* Divider Line */
+  .divider-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-muted to-transparent;
+    animation: fadeIn 0.8s ease-out 0.4s both;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
   }
 }
