@@ -127,8 +127,8 @@ export default function Home() {
           {/* Hero Background Image */}
           <div className="mb-8 md:mb-12 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-0">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032454638/2DfqFw2tE4RAuJ8B9HaHye/hero-presenca-c2xRiibioodZPwh3RnL5bb.webp"
-              alt="Presença e Valor"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032454638/2DfqFw2tE4RAuJ8B9HaHye/hero-sol-lima_a4d0f75e.jpg"
+              alt="Sol Lima - Posicione-se"
               className="w-full h-auto rounded-2xl md:rounded-3xl shadow-md md:shadow-lg object-cover"
               loading="lazy"
             />
