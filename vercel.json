@@ -1,0 +1,7 @@
+{
+  "buildCommand": "pnpm install && pnpm run build",
+  "startCommand": "pnpm start",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
