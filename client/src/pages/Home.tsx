@@ -22,6 +22,7 @@ interface LinkButton {
   action?: () => void;
   disabled?: boolean;
   isComingSoon?: boolean;
+  isLegacy?: boolean;
 }
 
 export default function Home() {
@@ -41,42 +42,45 @@ export default function Home() {
   const buttons: LinkButton[] = [
     {
       id: 'teste-masculino',
-      title: 'Teste masculino',
-      subtitle: 'Descubra seu nível de presença',
+      title: 'Nível de Presença Alfa',
+      subtitle: 'Descubra por que você está invisível no jogo.',
       href: 'https://diagnostico-presenca-masculina.vercel.app/',
     },
     {
       id: 'teste-feminino',
-      title: 'Teste feminino',
-      subtitle: 'Descubra o que está reduzindo seu magnetismo',
+      title: 'Raio-X do Magnetismo Feminino',
+      subtitle: 'O que está sabotando a sua atração agora?',
       href: 'https://presenca-feminina.vercel.app/',
     },
     {
       id: 'apoiar',
-      title: 'Apoiar meu trabalho',
+      title: 'Financie o Exército',
       subtitle: 'Pix',
       action: handlePixCopy,
     },
     {
-      id: 'mentoria',
-      title: 'Mentoria',
-      subtitle: 'Em breve',
+      id: 'morte-vida',
+      title: 'Morte em Vida (O Livro)',
+      subtitle: 'A anatomia do feminicídio emocional. Você sabe o que é.',
       disabled: true,
       isComingSoon: true,
+      isLegacy: true,
     },
     {
       id: 'posicione',
-      title: 'Posicione-se',
-      subtitle: 'Em breve',
+      title: 'Método Posicione-se',
+      subtitle: 'Não é o mundo que te ignora. Mude o jogo.',
       disabled: true,
       isComingSoon: true,
+      isLegacy: true,
     },
     {
-      id: 'morte-vida',
-      title: 'Morte em Vida',
-      subtitle: 'Em breve',
+      id: 'mentoria',
+      title: 'Mentoria',
+      subtitle: 'A tensão como mola para o extraordinário.',
       disabled: true,
       isComingSoon: true,
+      isLegacy: true,
     },
   ];
 
@@ -143,7 +147,7 @@ export default function Home() {
           {/* Bio */}
           <p className="text-base sm:text-lg md:text-xl text-foreground/75 font-light max-w-md mx-auto leading-relaxed px-2"
              style={{ fontFamily: "'Lora', serif" }}>
-            O que você transmite importa mais do que você imagina.
+            Autoconhecimento não é coach, é sobrevivência. Escolha a sua saída do cativeiro.
           </p>
         </motion.div>
 
@@ -187,9 +191,13 @@ export default function Home() {
                 <button
                   onClick={button.action}
                   disabled={button.disabled}
-                  className={`btn-premium group text-left w-full hover:bg-primary/95 focus:outline-none focus:ring-2 focus:ring-muted focus:ring-offset-2 focus:ring-offset-background transition-all ${
-                    button.disabled ? 'opacity-50 cursor-not-allowed hover:bg-primary' : ''
-                  }`}
+                  className={
+                    button.isLegacy
+                      ? 'btn-premium-legacy group text-left w-full'
+                      : `btn-premium group text-left w-full hover:bg-primary/95 focus:outline-none focus:ring-2 focus:ring-muted focus:ring-offset-2 focus:ring-offset-background transition-all ${
+                          button.disabled ? 'opacity-50 cursor-not-allowed hover:bg-primary' : ''
+                        }`
+                  }
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex-1">
