@@ -1,7 +1,4 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Copy, Check } from 'lucide-react';
-import { toast } from 'sonner';
 
 /**
  * SOL LIMA - PREMIUM EDITORIAL LINK NA BIO
@@ -26,58 +23,23 @@ interface LinkButton {
 }
 
 export default function Home() {
-  const [copiedPixKey, setCopiedPixKey] = useState(false);
-  const pixKey = 'sollimalovecoach@gmail.com';
-
-  const handlePixCopy = () => {
-    navigator.clipboard.writeText(pixKey);
-    setCopiedPixKey(true);
-    toast.success('Chave Pix copiada!', {
-      description: 'Você pode colar em seu app de banco',
-      duration: 3000,
-    });
-    setTimeout(() => setCopiedPixKey(false), 2000);
-  };
-
   const buttons: LinkButton[] = [
     {
-      id: 'teste-masculino',
-      title: 'Nível de Presença Alfa',
-      subtitle: 'Descubra por que você está invisível no jogo.',
-      href: 'https://diagnostico-presenca-masculina.vercel.app/',
-    },
-    {
       id: 'teste-feminino',
-      title: 'Raio-X do Magnetismo Feminino',
-      subtitle: 'O que está sabotando a sua atração agora?',
+      title: 'DIAGNÓSTICO: ANATOMIA DA PRESENÇA FEMININA',
+      subtitle: 'Descubra por que você é invisível onde deveria ser rainha.',
       href: 'https://presenca-feminina.vercel.app/',
     },
     {
-      id: 'apoiar',
-      title: 'Financie o Exército',
-      subtitle: 'Pix',
-      action: handlePixCopy,
+      id: 'teste-masculino',
+      title: 'PROTOCOLO: DOMÍNIO E RUÍNA MASCULINA',
+      subtitle: 'Onde o seu código de autoridade foi prejudicado?',
+      href: 'https://diagnostico-presenca-masculina.vercel.app/',
     },
     {
       id: 'morte-vida',
-      title: 'Morte em Vida (O Livro)',
-      subtitle: 'A anatomia do feminicídio emocional. Você sabe o que é.',
-      disabled: true,
-      isComingSoon: true,
-      isLegacy: true,
-    },
-    {
-      id: 'posicione',
-      title: 'Método Posicione-se',
-      subtitle: 'Não é o mundo que te ignora. Mude o jogo.',
-      disabled: true,
-      isComingSoon: true,
-      isLegacy: true,
-    },
-    {
-      id: 'mentoria',
-      title: 'Mentoria',
-      subtitle: 'A tensão como mola para o extraordinário.',
+      title: 'LISTA DE ESPERA: MORTE EM VIDA',
+      subtitle: 'Para quem pode carregar o próprio cadáver.',
       disabled: true,
       isComingSoon: true,
       isLegacy: true,
@@ -131,8 +93,8 @@ export default function Home() {
           {/* Hero Background Image */}
           <div className="mb-8 md:mb-12 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-0">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032454638/2DfqFw2tE4RAuJ8B9HaHye/hero-sol-lima_a4d0f75e.jpg"
-              alt="Sol Lima - Posicione-se"
+              src="/hero-reposicione.jpg"
+              alt="Sol Lima - Reposicione-se"
               className="w-full h-auto rounded-2xl md:rounded-3xl shadow-md md:shadow-lg object-cover"
               loading="lazy"
             />
@@ -147,7 +109,7 @@ export default function Home() {
           {/* Bio */}
           <p className="text-base sm:text-lg md:text-xl text-foreground/75 font-light max-w-md mx-auto leading-relaxed px-2"
              style={{ fontFamily: "'Lora', serif" }}>
-            Autoconhecimento não é coach, é sobrevivência. Escolha a sua saída do cativeiro.
+            Se o seu posicionamento atual não te trouxe o que você merece, você não está posicionado. Você está estagnado.
           </p>
         </motion.div>
 
@@ -211,13 +173,7 @@ export default function Home() {
                       )}
                     </div>
                     <div className="text-primary-foreground/60 group-hover:text-primary-foreground transition-colors flex-shrink-0">
-                      {button.action && !copiedPixKey ? (
-                        <Copy size={18} />
-                      ) : button.action && copiedPixKey ? (
-                        <Check size={18} className="text-green-400" />
-                      ) : (
-                        '→'
-                      )}
+                      →
                     </div>
                   </div>
                 </button>
