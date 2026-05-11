@@ -337,9 +337,13 @@ export default function Home() {
                             {button.title}
                           </div>
                           {button.badge && (
-                            <span className="px-2 py-0.5 rounded-full bg-[#C6A769]/20 border border-[#C6A769]/30 text-[9px] sm:text-[10px] text-[#C6A769] font-medium tracking-wider uppercase whitespace-nowrap">
+                            <motion.span 
+                              className="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[#C6A769]/20 to-[#C6A769]/10 border border-[#C6A769]/40 text-[9px] sm:text-[10px] text-[#C6A769] font-semibold tracking-widest uppercase whitespace-nowrap"
+                              animate={{ boxShadow: ['0 0 0px rgba(198,167,105,0)', '0 0 12px rgba(198,167,105,0.4)', '0 0 0px rgba(198,167,105,0)'] }}
+                              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                            >
                               {button.badge}
-                            </span>
+                            </motion.span>
                           )}
                         </div>
                         {button.subtitle && (
