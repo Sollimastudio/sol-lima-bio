@@ -24,6 +24,7 @@ interface LinkButton {
   isWaitlist?: boolean;
   icon: string;
   gradient?: string;
+  badge?: string;
 }
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
       href: 'https://presenca-feminina.vercel.app/',
       icon: '✧',
       gradient: 'from-purple-500/20 via-pink-500/10 to-rose-500/20',
+      badge: 'Comece Aqui',
     },
     {
       id: 'diagnostico-masculina',
@@ -43,6 +45,7 @@ export default function Home() {
       href: 'https://diagnostico-presenca-masculina.vercel.app/',
       icon: '✦',
       gradient: 'from-blue-500/20 via-slate-500/10 to-indigo-500/20',
+      badge: 'Comece Aqui',
     },
     {
       id: 'magnetus-mulheres',
@@ -207,12 +210,21 @@ export default function Home() {
             />
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#0a0a0a] p-[3px]">
               <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] flex items-center justify-center">
-                <span
-                  className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#C6A769] to-[#C48A8A]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  SL
-                </span>
+                <img 
+                  src="/perfil.jpg" 
+                  alt="Sol Lima" 
+                  className="w-full h-full object-cover object-[center_15%]"
+                  onError={(e) => {
+                    // Fallback to SL text if image not found
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement?.classList.add('bg-gradient-to-br');
+                    const span = document.createElement('span');
+                    span.className = "text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#C6A769] to-[#C48A8A]";
+                    span.style.fontFamily = "'Playfair Display', serif";
+                    span.innerText = "SL";
+                    e.currentTarget.parentElement?.appendChild(span);
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -320,8 +332,15 @@ export default function Home() {
                       </div>
                       {/* Text */}
                       <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-sm sm:text-base text-[#F5F0E8] tracking-wide group-hover:text-white transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
-                          {button.title}
+                        <div className="flex items-center gap-2">
+                          <div className="font-semibold text-sm sm:text-base text-[#F5F0E8] tracking-wide group-hover:text-white transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
+                            {button.title}
+                          </div>
+                          {button.badge && (
+                            <span className="px-2 py-0.5 rounded-full bg-[#C6A769]/20 border border-[#C6A769]/30 text-[9px] sm:text-[10px] text-[#C6A769] font-medium tracking-wider uppercase whitespace-nowrap">
+                              {button.badge}
+                            </span>
+                          )}
                         </div>
                         {button.subtitle && (
                           <div className="text-xs text-[#F5F0E8]/50 mt-0.5 font-light tracking-wide group-hover:text-[#F5F0E8]/70 transition-colors duration-300" style={{ fontFamily: "'Lora', serif" }}>
