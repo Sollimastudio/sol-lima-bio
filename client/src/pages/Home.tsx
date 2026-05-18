@@ -7,12 +7,13 @@ import { motion } from 'framer-motion';
  * animated gradient borders, and micro-interactions.
  * 
  * Buttons:
- * 1. MAGNETUS III — Mulheres
- * 2. MAGNETUS III — Homens
- * 3. Instagram
- * 4. Livro: Morte em Vida (lista de espera)
- * 5. Livro: Reposicione-se (lista de espera)
- * 6. Site: Relacione-se
+ * 1. Diagnóstico — Mulheres
+ * 2. Diagnóstico — Homens
+ * 3. MAGNETUS III — escolha feminino/masculino
+ * 4. Instagram
+ * 5. Livro: Morte em Vida (lista de espera)
+ * 6. Livro: Reposicione-se (lista de espera)
+ * 7. Site: Relacione-se
  */
 
 interface LinkButton {
@@ -48,20 +49,13 @@ export default function Home() {
       badge: 'Comece Aqui',
     },
     {
-      id: 'magnetus-mulheres',
+      id: 'magnetus-escolha',
       title: 'MAGNETUS III',
-      subtitle: 'Protocolo para Mulheres',
-      href: 'https://magnetus-sales-page.vercel.app',
-      icon: '♀',
-      gradient: 'from-rose-500/20 via-pink-500/10 to-fuchsia-500/20',
-    },
-    {
-      id: 'magnetus-homens',
-      title: 'MAGNETUS III',
-      subtitle: 'Protocolo para Homens',
-      href: 'https://magnetus-homens.vercel.app/',
-      icon: '♂',
-      gradient: 'from-blue-500/20 via-indigo-500/10 to-cyan-500/20',
+      subtitle: 'Escolha: protocolo para mulheres ou para homens',
+      href: '/magnetus',
+      icon: '✧',
+      gradient: 'from-amber-500/20 via-rose-500/10 to-blue-500/20',
+      badge: 'Escolha Aqui',
     },
     {
       id: 'instagram',
@@ -307,8 +301,8 @@ export default function Home() {
                 /* Active Button */
                 <a
                   href={button.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={button.href?.startsWith('/') ? '_self' : '_blank'}
+                  rel={button.href?.startsWith('/') ? undefined : 'noopener noreferrer'}
                   className="bio-btn-active group relative block rounded-2xl p-[1px] overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   {/* Animated gradient border on hover */}
