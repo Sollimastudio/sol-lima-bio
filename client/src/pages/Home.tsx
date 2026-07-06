@@ -42,8 +42,8 @@ export default function Home() {
     },
     {
       id: 'diagnostico-masculina',
-      title: 'Diagnóstico',
-      subtitle: 'Domínio e Ruína Masculina',
+      title: 'Diagnóstico Rápido',
+      subtitle: 'Retorno de Comando Masculino',
       href: 'https://diagnostico-presenca-masculina.vercel.app/',
       icon: '✦',
       gradient: 'from-blue-500/20 via-slate-500/10 to-indigo-500/20',
@@ -231,6 +231,10 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+            Diagnóstico masculino · atualização de presença
+          </div>
+
           {/* Name */}
           <h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#F5F0E8] via-[#C6A769] to-[#F5F0E8]"
@@ -244,7 +248,7 @@ export default function Home() {
             className="text-sm sm:text-base text-[#F5F0E8]/70 font-light max-w-sm mx-auto leading-relaxed tracking-wide"
             style={{ fontFamily: "'Lora', serif" }}
           >
-            Se o seu posicionamento atual não te trouxe o que você merece, você não está posicionado. Você está estagnado.
+            Se você sente que a sua presença perdeu força, a sua clareza ficou mais fraca e o seu comando não é mais automático, isso não é fraqueza. É sinal de que chegou a hora de atualizar sua postura. E quem demora, perde terreno.
           </p>
 
           {/* Brand Badge */}
@@ -268,6 +272,36 @@ export default function Home() {
           }}
           variants={itemVariants}
         />
+
+        {/* Diagnostic Card */}
+        <motion.div
+          className="mb-8 rounded-2xl border border-[#C6A769]/15 bg-[#0a0a0a]/70 p-5 text-left shadow-[0_0_40px_rgba(198,167,105,0.06)] backdrop-blur-sm"
+          variants={itemVariants}
+        >
+          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-[#C6A769]">
+            Diagnóstico rápido
+          </p>
+          <p className="mt-2 text-base sm:text-lg text-[#F5F0E8]/90 leading-relaxed">
+            Não é autoajuda. É um protocolo de leitura de padrões para quem não pode mais fingir que está tudo bem. É um diagnóstico de presença, comando e atualização para quem não tem mais tempo para perder.
+          </p>
+          <p className="mt-3 text-sm text-[#F5F0E8]/70">
+            O seu problema não é falta de esforço. É falta de leitura precisa do que mudou.
+          </p>
+          <p className="mt-3 text-sm font-semibold text-[#F5F0E8]/85">
+            Se você ainda está esperando que isso passe sozinho, já está atrasado. O atraso não é neutral. Ele consome sua presença, enfraquece seu comando e te deixa para trás.
+          </p>
+          <p className="mt-3 text-sm text-[#F5F0E8]/70">
+            Se você se reconhece nessa sensação de desatualização, comece por aqui. Não precisa de mais motivação. Precisa de um diagnóstico correto.
+          </p>
+          <div className="mt-5 rounded-xl border border-[#C6A769]/20 bg-[#C6A769]/10 p-4">
+            <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-[#C6A769]">
+              Ação imediata
+            </p>
+            <p className="mt-2 text-sm sm:text-base text-[#F5F0E8]/85">
+              Descubra em 60 segundos onde o padrão começou. Clique e veja o diagnóstico antes que o atraso vire rotina.
+            </p>
+          </div>
+        </motion.div>
 
         {/* Buttons */}
         <motion.div className="space-y-3" variants={containerVariants}>
@@ -384,7 +418,7 @@ export default function Home() {
             className="text-[11px] text-[#F5F0E8]/20 tracking-[0.2em] uppercase"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Sol Lima · Relacione-se
+            Leitura. Atualização. Retorno de comando. Sem enrolação.
           </p>
         </motion.div>
       </motion.main>
